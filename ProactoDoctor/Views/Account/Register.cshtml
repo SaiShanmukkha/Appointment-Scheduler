@@ -1,0 +1,65 @@
+﻿@model ProactoDoctor.Models.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Registration Form:</h2>
+<form method="Post" asp-controller="Account" asp-action="Register">
+    <h6>Create New Account:</h6>
+    <hr />
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="Name"></label>
+        <div class="col-md-10">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="Email"></label>
+        <div class="col-md-10">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="Password"></label>
+        <div class="col-md-10">
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="ConfirmPassword"></label>
+        <div class="col-md-10">
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2" asp-for="RoleName"></label>
+        <div class="col-md-10">
+            <select asp-for="RoleName" asp-items="@ProactoDoctor.Utilities.Helper.GetRolesForDropDown()" class="form-control">
+            </select>
+            <span asp-validation-for="RoleName" class="text-danger" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10 offset-md-2">
+            <input type="submit" value="Register" class="btn btn-success" />
+        </div>
+    </div>
+    <p class="col-md-10 offset=-md-2">
+        Already have an account?
+        <a asp-action="Login">Login</a>
+    </p>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+</form>
+
+
+@section Scripts{ 
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+

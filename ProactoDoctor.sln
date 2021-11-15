@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProactoDoctor", "ProactoDoctor\ProactoDoctor.csproj", "{5E1FA0EE-703F-43A3-A99F-3B1206713CBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E1FA0EE-703F-43A3-A99F-3B1206713CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1FA0EE-703F-43A3-A99F-3B1206713CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1FA0EE-703F-43A3-A99F-3B1206713CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1FA0EE-703F-43A3-A99F-3B1206713CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9383C341-029F-4CDA-A6BE-4C78D9CBF5BF}
+	EndGlobalSection
+EndGlobal

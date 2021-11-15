@@ -1,0 +1,50 @@
+﻿@model ProactoDoctor.Models.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<h2>Log In Form:</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            <form id="account" method="post" asp-action="Login" asp-controller="Account">
+                <h6>Use Your Registered Email Id and Password to Login.</h6>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group row">
+                    <label class="col-md-2" asp-for="Email"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger" />
+                    </div>
+                </div><div class="form-group row">
+                    <label class="col-md-2" asp-for="Password"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger" />
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10 offset-md-2 checkbox">
+                        <label asp-for="RememberMe" class="pr-2 pl-0">
+                            <input asp-for="RememberMe" />
+                        </label>
+                        Remember Me?
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10 offset-md-2">
+                        <input type="submit" value="Log In" class="btn btn-success" />
+                    </div>
+                </div>
+                <p class="col-md-10 offset=-md-2">
+                    Don't have an account?
+                    <a asp-action="Register">Register</a>
+                </p>
+            </form>
+        </section>
+    </div>
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

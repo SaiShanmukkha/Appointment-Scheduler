@@ -1,0 +1,23 @@
+﻿@{ 
+    ViewData["Title"] = "Appointment Scheduler";
+}
+
+
+<div class="row">
+    <div class="container">
+        @if (User.IsInRole(ProactoDoctor.Utilities.Helper.Admin))
+        {
+            <div class="form-group row col-2" id="divDoctorList">
+                <label>Select Doctor:</label>
+                @Html.DropDownList("doctorId", new SelectList(ViewBag.DoctorList, "Id", "Name"), new { @class = "form-control select2", @onchange="onDoctorChange();" })
+                           
+            </div>
+        }
+
+        <div id="calendar">
+
+        </div>
+    </div>
+</div>
+
+<partial name="_AddEditAppointment" />
