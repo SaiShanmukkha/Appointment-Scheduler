@@ -1,6 +1,6 @@
-# ProactoDoctor:
+# Appointment-Scheduler:
 
-* Doctor Appointment Scheduling web application using ASP.NET Core 5.0
+* Appointment Scheduling web application using ASP.NET Core 5.0
 * .NET Core MVC Application 
 * TODO List Like Application. 
 * You must have .NET 5.0  or above version required to run this application
